@@ -1,0 +1,18 @@
+aside.logo {
+    background-color: var(--bg-dark); /* Retângulo do logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside.logo img {
+    padding: 0px 15px;
+    width: 100%;
+}
+
+@media(max-width: 576px) {
+    aside.logo img {
+        padding: 0px 80px;
+        width: 350px;
+    }
+}
