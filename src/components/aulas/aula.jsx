@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import {
     IonCard, IonCardHeader, IonCardSubtitle, IonItem,
     IonCardTitle, IonCardContent, IonModal, IonButton, IonContent,
@@ -8,33 +8,14 @@ import Main from '../template/Main'
 import { close, camera } from 'ionicons/icons';
 import { usePhotoGallery } from '../camera/camera';
 
-import { useCamera } from '@ionic/react-hooks/camera';
-import { CameraResultType, CameraSource, CameraPhoto, Capacitor, FilesystemDirectory } from "@capacitor/core";
+export default () => {
+    
+    const [modal, setModal] = useState(false);
 
+    const { takePhoto } = usePhotoGallery();
 
-export default class Aula extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showModal: false
-        }
-    }
-
-    setShowModal(value) {
-        this.setState({ showModal: value })
-    }
-
-    takePhoto() {
-        useCamera({
-            resultType: CameraResultType.Uri,
-            source: CameraSource.Camera,
-            quality: 25
-          });
-    }
-
-    render() {
-        ;
-        return (
+    return (
+        <>
             <Main>
                 <IonCard>
                     <IonCardHeader>
@@ -43,7 +24,7 @@ export default class Aula extends Component {
                     </IonCardHeader>
                     <IonCardContent>Professor Carlão</IonCardContent>
                     <IonItem>
-                        <IonButton size="small" onClick={() => this.setShowModal(true)}>Abrir aula</IonButton>
+                        <IonButton size="small" onClick={() => setModal(true)}>Abrir aula</IonButton>
                     </IonItem>
                 </IonCard>
 
@@ -54,7 +35,7 @@ export default class Aula extends Component {
                     </IonCardHeader>
                     <IonCardContent>Professor Carlão</IonCardContent>
                     <IonItem>
-                        <IonButton size="small" onClick={() => this.setShowModal(true)}>Abrir aula</IonButton>
+                        <IonButton size="small" onClick={() => setModal(true)}>Abrir aula</IonButton>
                     </IonItem>
                 </IonCard>
 
@@ -65,7 +46,7 @@ export default class Aula extends Component {
                     </IonCardHeader>
                     <IonCardContent>Professor Carlão</IonCardContent>
                     <IonItem>
-                        <IonButton size="small" onClick={() => this.setShowModal(true)}>Abrir aula</IonButton>
+                        <IonButton size="small" onClick={() => setModal(true)}>Abrir aula</IonButton>
                     </IonItem>
                 </IonCard>
 
@@ -76,26 +57,25 @@ export default class Aula extends Component {
                     </IonCardHeader>
                     <IonCardContent>Professor Carlão</IonCardContent>
                     <IonItem>
-                        <IonButton size="small" onClick={() => this.setShowModal(true)}>Abrir aula</IonButton>
+                        <IonButton size="small" onClick={() => setModal(true)}>Abrir aula</IonButton>
                     </IonItem>
                 </IonCard>
-                <IonModal isOpen={this.state.showModal}>
-                    
-                        <p>This is modal content</p>
-                        <IonFab vertical="top" horizontal="end" slot="fixed">
-                            <IonFabButton onClick={() => this.setShowModal(false)}>
-                                <IonIcon icon={close} />
-                            </IonFabButton>
-                        </IonFab>
+                <IonModal isOpen={modal}>
 
-                        <IonFab vertical="bottom" horizontal="center" slot="fixed">
-                            <IonFabButton onClick={() => this.takePhoto()}>
-                                <IonIcon icon={camera}></IonIcon>
-                            </IonFabButton>
-                        </IonFab>
-                    
+                    <IonFab vertical="top" horizontal="end" slot="fixed">
+                        <IonFabButton onClick={() => setModal(false)}>
+                            <IonIcon icon={close} />
+                        </IonFabButton>
+                    </IonFab>
+
+                    <IonFab vertical="bottom" horizontal="center" slot="fixed">
+                        <IonFabButton onClick={() => takePhoto()}>
+                            <IonIcon icon={camera}></IonIcon>
+                        </IonFabButton>
+                    </IonFab>
+
                 </IonModal>
             </Main>
-        )
-    }
+        </>
+    )
 }

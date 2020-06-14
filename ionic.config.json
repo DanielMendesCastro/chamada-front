@@ -1,0 +1,7 @@
+{
+  "name": "chamada",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

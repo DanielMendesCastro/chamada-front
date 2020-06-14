@@ -7,7 +7,7 @@ import { Route, Redirect } from 'react-router';
 import Home from '../components/home/Home'
 import aluno from '../components/aluno/aluno'
 import aluno2 from '../components/aluno/aluno2'
-import aulas from '../components/aulas/aulas'
+import aulas from '../components/aulas/aula'
     
 export default props =>
     <IonReactRouter>
