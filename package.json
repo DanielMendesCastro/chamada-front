@@ -8,7 +8,7 @@
     "@ionic/react-hooks": "^0.0.8",
     "@ionic/react-router": "^5.2.1",
     "axios": "0.18.0",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.5.0",
     "font-awesome": "4.7.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
