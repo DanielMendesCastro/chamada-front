@@ -5,6 +5,6 @@ export default props =>
     <footer className="footer">
         <span>
             Desenvolvido por 
-            <strong> Daniel Castro/ Welber Silveiro </strong>
+            <strong> Daniel Castro/ Welber Silvério </strong>
         </span>
     </footer>
