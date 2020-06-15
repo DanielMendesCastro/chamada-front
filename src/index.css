@@ -73,6 +73,37 @@ code {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
 }
 
+.greenPresent{
+  color: green;
+}
+
+.redPresent{
+  color: red;
+}
+
+.floatRed{
+  color: white;
+  background-color: red;
+  border-radius: 25em;
+}
+
+.floatGreen{
+  color: white;
+  background-color: green;
+  border-radius: 25em;
+}
+
+.floatsRow{
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.buttonClassSelect{
+  margin-left: 5.8em;
+}
+
 body {
   padding: 20px;
 }

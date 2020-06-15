@@ -29,11 +29,11 @@ export default class Aluno extends Component {
 
                 <div className="col-12 col-md-4 align-self-center align-items-center">
                     <IonContent>
-                    <IonFab vertical="start" horizontal="center" slot="fixed">
-          <IonFabButton>
-            <IonIcon icon={cameraOutline} />
-          </IonFabButton>
-        </IonFab>
+                        <IonFab vertical="start" horizontal="center" slot="fixed">
+                            <IonFabButton>
+                                <IonIcon icon={cameraOutline} />
+                            </IonFabButton>
+                        </IonFab>
 
                     </IonContent>
                     <IonItem>
