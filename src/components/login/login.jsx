@@ -26,7 +26,7 @@ export default class Login extends Component {
                     <IonInput value={this.state.password} ></IonInput>
                 </IonItem>
 
-                <IonButton>
+                <IonButton className="mt-4" expand="block" >
                     Entrar
                 </IonButton>
             </IonPage>

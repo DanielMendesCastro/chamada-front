@@ -12,6 +12,11 @@ input[type=checkbox] {
     margin-left: 20px;
 }
 
+.avatar{
+display: flex;
+justify-content: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -48,13 +53,7 @@ code {
   width: 200px;
   border: 1px solid;
 }
-  img {
-    width: 50%;
-    height: 90%;
-    border-radius: 25%;
-    border-style: groove;
-  }
-  
+
 .previewText {
   width: 100%;
   margin-top: 20px;

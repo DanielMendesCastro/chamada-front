@@ -14,7 +14,7 @@ export default props =>
 
         <div className="display-4"></div>
         <hr />
-        <p className="mb-0">Esse sistema tem por objetivo, agilizar e simplificar o processo de chamada efetuado em uma sala de aula!
+        <p className="mb-2 mt-2 text-center">Esse sistema tem por objetivo, agilizar e simplificar o processo de chamada efetuado em uma sala de aula!
         </p>
     </Main>
     

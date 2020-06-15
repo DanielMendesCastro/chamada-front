@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Main from '../template/Main'
+import Logo from '../../assets/imgs/camera-outline.svg'
 
 const headerProps = {
     icon: 'users',
