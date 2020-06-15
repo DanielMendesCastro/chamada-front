@@ -3,11 +3,11 @@ import { IonReactRouter } from '@ionic/react-router';
 import { IonRouterOutlet } from '@ionic/react';
 import { Route, Redirect } from 'react-router';
 
-
 import Home from '../components/home/Home'
 import aluno from '../components/aluno/aluno'
 import aluno2 from '../components/aluno/aluno2'
 import aulas from '../components/aulas/aula'
+import classe from '../components/classe/classe'
     
 export default props =>
     <IonReactRouter>
@@ -16,6 +16,7 @@ export default props =>
             <Route path="/users" component={aluno} />
             <Route path='/alunos' component={aluno2} />
             <Route path='/aulas' component={aulas} />
+            <Route path='/chamada' component={classe} />
             <Redirect exact from="/" to="/home" />
         </IonRouterOutlet>
     </IonReactRouter>

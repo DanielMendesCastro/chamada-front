@@ -8,11 +8,11 @@ import Main from '../template/Main'
 import { close, camera } from 'ionicons/icons';
 import { usePhotoGallery } from '../camera/camera';
 
-export default () => {
+export default props => {
     
     const [modal, setModal] = useState(false);
 
-    const { takePhoto } = usePhotoGallery();
+    const { photos, takePhoto } = usePhotoGallery();
 
     return (
         <>
